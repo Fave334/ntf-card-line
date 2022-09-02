@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-3.1.1.js"></script>
+  <link rel="stylesheet" href="Outfit-VariableFont_wght.ttf">
+  <script>
+    $(function () {
+      $(".img-container").mouseenter(function () {
+        $(".wrap-container").css({
+          "opacity": "0",
+          "display": "flex",
+        }).show().animate({ opacity: 1 });
+      });
+      $(".img-container").mouseleave(function () {
+        $(".wrap-container").css({
+          "display": "flex",
+          "opacity": "1",
+        }).show().animate({ opacity: 0});
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- 
+  Equilibrium #3429
+
+  Our Equilibrium collection promotes balance and calm.
+
+  0.041 ETH
+  3 days left
+  
+  Creation of Jules Wyvern -->
+  <div class="main">
+    <div class="img-container">
+      <img src="images/image-equilibrium.jpg" class="spec-img" alt="">
+      <div class="wrap-container">
+        <img src="images/icon-view.svg" alt="">
+      </div>
+    </div>
+    <div class="txt-container">
+      <h2>Equilibrium #3429</h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+    <div class="stats">
+      <div class="left">
+        <img src="images/icon-ethereum.svg" alt="">
+        <span class="spec-p">0.041 ETH</span>
+      </div>
+      <div class="right">
+        <img src="images/icon-clock.svg" alt="">
+        <span class="spec-p dark">3 days left</span>
+      </div>
+    </div>
+    <div class="demcation line"></div>
+    <div class="footer">
+      <div class="footer-img">
+        <img src="images/image-avatar.png" alt="">
+      </div>
+      <div class="credentials"><span class="dark">Creation of </span><span class="spec crack">Jules Wyvern</span></div>
+    </div>
+  </div>
+</body>
+
+</html>
